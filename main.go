@@ -8,6 +8,7 @@ import (
 	"github.com/ethereum/go-ethereum/ethclient"
 )
 
+// http://ethdocs.org/en/latest/network/test-networks.html#morden-s-genesis-json
 func main() {
 	// Create an IPC based RPC connection to a remote node
 	conn, err := ethclient.Dial("/home/karalabe/.ethereum/testnet/geth.ipc")
