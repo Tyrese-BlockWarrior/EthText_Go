@@ -2,8 +2,29 @@
    "version": "2.0.0",
    "tasks": [
       {
+         "taskName": "Run Server",
+         "command": "go run ./main.go ./token.go",
+         "type": "shell",
+         "group": "build",
+         "problemMatcher": [
+            "$go"
+         ],
+         "presentation": {
+            "echo": true,
+            "reveal": "always",
+            "focus": false,
+            "panel": "dedicated"
+         }
+      },
+      {
          "taskName": "Ethereum Test Network",
          "command": "geth --testnet --fast --cache=512 console",
+         "type": "shell",
+         "group": "test"
+      },
+      {
+         "taskName": "Ethereum Morden Network",
+         "command": "geth --morden --fast --cache=512 console",
          "type": "shell",
          "group": "test"
       },
@@ -15,9 +36,16 @@
       },
       {
          "taskName": "Generate ABI Binding",
-         "command": "abigen --abi token.abi --pkg main --type Token --out token.go",
+         "command": "abigen --abi ./bin/contracts/TobaToken.abi --pkg main --type Token --out token.go",
          "type": "shell",
-         "group": "none",
+         "group": "build",
+         "problemMatcher": []
+      },
+      {
+         "taskName": "Genesis Block",
+         "command": "geth init ./CustomGenesis.json",
+         "type": "shell",
+         "group": "build",
          "problemMatcher": []
       }
    ]

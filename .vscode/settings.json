@@ -53,16 +53,25 @@
    // enabling this breaks the linters
    "go.gocodeAutoBuild": false,
 
-   "jsDocCompletion.enabled": false,
-
-   "search.exclude": {
-      "**/node_modules": true,
-      "**/vendor": true
-   },
-
-   "tslint.enable": true,
-   "tslint.run": "onType",
-   "tslint.autoFixOnSave": true,
-
-   "typescript.referencesCodeLens.enabled": false
+   "solidity.enabledAsYouTypeCompilationErrorCheck": true,
+   "solidity.validationDelay": 1500,
+   "solidity.soliumRules": {
+      "array-declarations": true,
+      "blank-lines": false,
+      "camelcase": true,
+      "deprecated-suicide": true,
+      "double-quotes": true,
+      "imports-on-top": true,
+      "indentation": false,
+      "lbrace": true,
+      "mixedcase": true,
+      "no-empty-blocks": true,
+      "no-unused-vars": true,
+      "no-with": true,
+      "operator-whitespace": true,
+      "pragma-on-top": true,
+      "uppercase": true,
+      "variable-declarations": true,
+      "whitespace": true
+   }
  }
