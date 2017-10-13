@@ -1,5 +1,5 @@
 # Overview
-Solidity and DApp experiments
+Solidity and ÐApp experiments with [Go contract bindings](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts).
 
 # Setup
 

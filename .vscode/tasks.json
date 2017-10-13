@@ -32,17 +32,18 @@
          "taskName": "Compile Contracts",
          "command": "abigen --abi token.abi --pkg main --type Token --out token.go",
          "type": "shell",
-         "group": "build"
+         "group": "build",
+         "problemMatcher": []
       },
       {
          "taskName": "Generate ABI Binding",
          "command": "abigen --abi ./bin/contracts/TobaToken.abi --pkg main --type Token --out token.go",
          "type": "shell",
          "group": "build",
-         "problemMatcher": []
+         "problemMatcher": ["$go"]
       },
       {
-         "taskName": "Genesis Block",
+         "taskName": "Create Genesis Block",
          "command": "geth init ./CustomGenesis.json",
          "type": "shell",
          "group": "build",
