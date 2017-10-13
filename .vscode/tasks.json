@@ -29,15 +29,8 @@
          "group": "test"
       },
       {
-         "taskName": "Compile Contracts",
-         "command": "abigen --abi token.abi --pkg main --type Token --out token.go",
-         "type": "shell",
-         "group": "build",
-         "problemMatcher": []
-      },
-      {
          "taskName": "Generate ABI Binding",
-         "command": "abigen --abi ./bin/contracts/TobaToken.abi --pkg main --type Token --out token.go",
+         "command": "abigen --sol ./contracts/token.sol --pkg contracts --out ./contracts/token.go",
          "type": "shell",
          "group": "build",
          "problemMatcher": ["$go"]

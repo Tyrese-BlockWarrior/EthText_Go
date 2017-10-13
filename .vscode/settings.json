@@ -58,7 +58,7 @@
    "solidity.soliumRules": {
       "array-declarations": true,
       "blank-lines": false,
-      "camelcase": true,
+      "camelcase": false,
       "deprecated-suicide": true,
       "double-quotes": true,
       "imports-on-top": true,

@@ -4,8 +4,22 @@ interface tokenRecipient {
    function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData);
 }
 
+contract owned {
+   address public owner;
+
+   function owned() { owner = msg.sender; }
+
+   modifier onlyOwner {
+      require(msg.sender == owner);
+      _;
+   }
+   function transferOwnership(address newOwner) onlyOwner {
+      owner = newOwner;
+   }
+}
+
 /* Based on sample token https://ethereum.org/token */
-contract TobaToken {
+contract TobaToken is owned {
    string public name;
    string public symbol;
    uint8 public decimals = 18;
@@ -118,7 +132,7 @@ contract TobaToken {
    }
 
    /**
-    * Destroy tokens from other ccount
+    * Destroy tokens from other account
     *
     * Remove `_value` tokens from the system irreversibly on behalf of `_from`.
     *
@@ -133,5 +147,12 @@ contract TobaToken {
       totalSupply -= _value;                              // Update totalSupply
       Burn(_from, _value);
       return true;
+   }
+
+   function mintToken(address target, uint256 mintedAmount) onlyOwner {
+      balanceOf[target] += mintedAmount;
+      totalSupply += mintedAmount;
+      Transfer(0, owner, mintedAmount);
+      Transfer(owner, target, mintedAmount);
    }
 }

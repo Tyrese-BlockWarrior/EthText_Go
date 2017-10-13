@@ -1,7 +1,7 @@
 // Code generated - DO NOT EDIT.
 // This file is a generated binding and any manual changes will be lost.
 
-package main
+package contracts
 
 import (
 	"math/big"
@@ -14,7 +14,7 @@ import (
 )
 
 // TokenABI is the input ABI used to generate the binding from.
-const TokenABI = "[{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_from\",\"type\":\"address\"},{\"name\":\"_to\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_to\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[],\"payable\":false,\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_spender\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"},{\"name\":\"_extraData\",\"type\":\"bytes\"}],\"name\":\"approveAndCall\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"address\"}],\"name\":\"spentAllowance\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"type\":\"function\"},{\"inputs\":[{\"name\":\"initialSupply\",\"type\":\"uint256\"},{\"name\":\"tokenName\",\"type\":\"string\"},{\"name\":\"decimalUnits\",\"type\":\"uint8\"},{\"name\":\"tokenSymbol\",\"type\":\"string\"}],\"payable\":false,\"type\":\"constructor\"},{\"payable\":false,\"type\":\"fallback\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"}]"
+const TokenABI = "[{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_spender\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_from\",\"type\":\"address\"},{\"name\":\"_to\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"target\",\"type\":\"address\"},{\"name\":\"mintedAmount\",\"type\":\"uint256\"}],\"name\":\"mintToken\",\"outputs\":[],\"payable\":false,\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_from\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"burnFrom\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_to\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[],\"payable\":false,\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_spender\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"},{\"name\":\"_extraData\",\"type\":\"bytes\"}],\"name\":\"approveAndCall\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"type\":\"function\"},{\"inputs\":[{\"name\":\"initialSupply\",\"type\":\"uint256\"},{\"name\":\"tokenName\",\"type\":\"string\"},{\"name\":\"tokenSymbol\",\"type\":\"string\"}],\"payable\":false,\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"from\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Burn\",\"type\":\"event\"}]"
 
 // Token is an auto generated Go binding around an Ethereum contract.
 type Token struct {
@@ -247,30 +247,30 @@ func (_Token *TokenCallerSession) Name() (string, error) {
 	return _Token.Contract.Name(&_Token.CallOpts)
 }
 
-// SpentAllowance is a free data retrieval call binding the contract method 0xdc3080f2.
+// Owner is a free data retrieval call binding the contract method 0x8da5cb5b.
 //
-// Solidity: function spentAllowance( address,  address) constant returns(uint256)
-func (_Token *TokenCaller) SpentAllowance(opts *bind.CallOpts, arg0 common.Address, arg1 common.Address) (*big.Int, error) {
+// Solidity: function owner() constant returns(address)
+func (_Token *TokenCaller) Owner(opts *bind.CallOpts) (common.Address, error) {
 	var (
-		ret0 = new(*big.Int)
+		ret0 = new(common.Address)
 	)
 	out := ret0
-	err := _Token.contract.Call(opts, out, "spentAllowance", arg0, arg1)
+	err := _Token.contract.Call(opts, out, "owner")
 	return *ret0, err
 }
 
-// SpentAllowance is a free data retrieval call binding the contract method 0xdc3080f2.
+// Owner is a free data retrieval call binding the contract method 0x8da5cb5b.
 //
-// Solidity: function spentAllowance( address,  address) constant returns(uint256)
-func (_Token *TokenSession) SpentAllowance(arg0 common.Address, arg1 common.Address) (*big.Int, error) {
-	return _Token.Contract.SpentAllowance(&_Token.CallOpts, arg0, arg1)
+// Solidity: function owner() constant returns(address)
+func (_Token *TokenSession) Owner() (common.Address, error) {
+	return _Token.Contract.Owner(&_Token.CallOpts)
 }
 
-// SpentAllowance is a free data retrieval call binding the contract method 0xdc3080f2.
+// Owner is a free data retrieval call binding the contract method 0x8da5cb5b.
 //
-// Solidity: function spentAllowance( address,  address) constant returns(uint256)
-func (_Token *TokenCallerSession) SpentAllowance(arg0 common.Address, arg1 common.Address) (*big.Int, error) {
-	return _Token.Contract.SpentAllowance(&_Token.CallOpts, arg0, arg1)
+// Solidity: function owner() constant returns(address)
+func (_Token *TokenCallerSession) Owner() (common.Address, error) {
+	return _Token.Contract.Owner(&_Token.CallOpts)
 }
 
 // Symbol is a free data retrieval call binding the contract method 0x95d89b41.
@@ -299,6 +299,53 @@ func (_Token *TokenCallerSession) Symbol() (string, error) {
 	return _Token.Contract.Symbol(&_Token.CallOpts)
 }
 
+// TotalSupply is a free data retrieval call binding the contract method 0x18160ddd.
+//
+// Solidity: function totalSupply() constant returns(uint256)
+func (_Token *TokenCaller) TotalSupply(opts *bind.CallOpts) (*big.Int, error) {
+	var (
+		ret0 = new(*big.Int)
+	)
+	out := ret0
+	err := _Token.contract.Call(opts, out, "totalSupply")
+	return *ret0, err
+}
+
+// TotalSupply is a free data retrieval call binding the contract method 0x18160ddd.
+//
+// Solidity: function totalSupply() constant returns(uint256)
+func (_Token *TokenSession) TotalSupply() (*big.Int, error) {
+	return _Token.Contract.TotalSupply(&_Token.CallOpts)
+}
+
+// TotalSupply is a free data retrieval call binding the contract method 0x18160ddd.
+//
+// Solidity: function totalSupply() constant returns(uint256)
+func (_Token *TokenCallerSession) TotalSupply() (*big.Int, error) {
+	return _Token.Contract.TotalSupply(&_Token.CallOpts)
+}
+
+// Approve is a paid mutator transaction binding the contract method 0x095ea7b3.
+//
+// Solidity: function approve(_spender address, _value uint256) returns(success bool)
+func (_Token *TokenTransactor) Approve(opts *bind.TransactOpts, _spender common.Address, _value *big.Int) (*types.Transaction, error) {
+	return _Token.contract.Transact(opts, "approve", _spender, _value)
+}
+
+// Approve is a paid mutator transaction binding the contract method 0x095ea7b3.
+//
+// Solidity: function approve(_spender address, _value uint256) returns(success bool)
+func (_Token *TokenSession) Approve(_spender common.Address, _value *big.Int) (*types.Transaction, error) {
+	return _Token.Contract.Approve(&_Token.TransactOpts, _spender, _value)
+}
+
+// Approve is a paid mutator transaction binding the contract method 0x095ea7b3.
+//
+// Solidity: function approve(_spender address, _value uint256) returns(success bool)
+func (_Token *TokenTransactorSession) Approve(_spender common.Address, _value *big.Int) (*types.Transaction, error) {
+	return _Token.Contract.Approve(&_Token.TransactOpts, _spender, _value)
+}
+
 // ApproveAndCall is a paid mutator transaction binding the contract method 0xcae9ca51.
 //
 // Solidity: function approveAndCall(_spender address, _value uint256, _extraData bytes) returns(success bool)
@@ -318,6 +365,69 @@ func (_Token *TokenSession) ApproveAndCall(_spender common.Address, _value *big.
 // Solidity: function approveAndCall(_spender address, _value uint256, _extraData bytes) returns(success bool)
 func (_Token *TokenTransactorSession) ApproveAndCall(_spender common.Address, _value *big.Int, _extraData []byte) (*types.Transaction, error) {
 	return _Token.Contract.ApproveAndCall(&_Token.TransactOpts, _spender, _value, _extraData)
+}
+
+// Burn is a paid mutator transaction binding the contract method 0x42966c68.
+//
+// Solidity: function burn(_value uint256) returns(success bool)
+func (_Token *TokenTransactor) Burn(opts *bind.TransactOpts, _value *big.Int) (*types.Transaction, error) {
+	return _Token.contract.Transact(opts, "burn", _value)
+}
+
+// Burn is a paid mutator transaction binding the contract method 0x42966c68.
+//
+// Solidity: function burn(_value uint256) returns(success bool)
+func (_Token *TokenSession) Burn(_value *big.Int) (*types.Transaction, error) {
+	return _Token.Contract.Burn(&_Token.TransactOpts, _value)
+}
+
+// Burn is a paid mutator transaction binding the contract method 0x42966c68.
+//
+// Solidity: function burn(_value uint256) returns(success bool)
+func (_Token *TokenTransactorSession) Burn(_value *big.Int) (*types.Transaction, error) {
+	return _Token.Contract.Burn(&_Token.TransactOpts, _value)
+}
+
+// BurnFrom is a paid mutator transaction binding the contract method 0x79cc6790.
+//
+// Solidity: function burnFrom(_from address, _value uint256) returns(success bool)
+func (_Token *TokenTransactor) BurnFrom(opts *bind.TransactOpts, _from common.Address, _value *big.Int) (*types.Transaction, error) {
+	return _Token.contract.Transact(opts, "burnFrom", _from, _value)
+}
+
+// BurnFrom is a paid mutator transaction binding the contract method 0x79cc6790.
+//
+// Solidity: function burnFrom(_from address, _value uint256) returns(success bool)
+func (_Token *TokenSession) BurnFrom(_from common.Address, _value *big.Int) (*types.Transaction, error) {
+	return _Token.Contract.BurnFrom(&_Token.TransactOpts, _from, _value)
+}
+
+// BurnFrom is a paid mutator transaction binding the contract method 0x79cc6790.
+//
+// Solidity: function burnFrom(_from address, _value uint256) returns(success bool)
+func (_Token *TokenTransactorSession) BurnFrom(_from common.Address, _value *big.Int) (*types.Transaction, error) {
+	return _Token.Contract.BurnFrom(&_Token.TransactOpts, _from, _value)
+}
+
+// MintToken is a paid mutator transaction binding the contract method 0x79c65068.
+//
+// Solidity: function mintToken(target address, mintedAmount uint256) returns()
+func (_Token *TokenTransactor) MintToken(opts *bind.TransactOpts, target common.Address, mintedAmount *big.Int) (*types.Transaction, error) {
+	return _Token.contract.Transact(opts, "mintToken", target, mintedAmount)
+}
+
+// MintToken is a paid mutator transaction binding the contract method 0x79c65068.
+//
+// Solidity: function mintToken(target address, mintedAmount uint256) returns()
+func (_Token *TokenSession) MintToken(target common.Address, mintedAmount *big.Int) (*types.Transaction, error) {
+	return _Token.Contract.MintToken(&_Token.TransactOpts, target, mintedAmount)
+}
+
+// MintToken is a paid mutator transaction binding the contract method 0x79c65068.
+//
+// Solidity: function mintToken(target address, mintedAmount uint256) returns()
+func (_Token *TokenTransactorSession) MintToken(target common.Address, mintedAmount *big.Int) (*types.Transaction, error) {
+	return _Token.Contract.MintToken(&_Token.TransactOpts, target, mintedAmount)
 }
 
 // Transfer is a paid mutator transaction binding the contract method 0xa9059cbb.
@@ -360,4 +470,25 @@ func (_Token *TokenSession) TransferFrom(_from common.Address, _to common.Addres
 // Solidity: function transferFrom(_from address, _to address, _value uint256) returns(success bool)
 func (_Token *TokenTransactorSession) TransferFrom(_from common.Address, _to common.Address, _value *big.Int) (*types.Transaction, error) {
 	return _Token.Contract.TransferFrom(&_Token.TransactOpts, _from, _to, _value)
+}
+
+// TransferOwnership is a paid mutator transaction binding the contract method 0xf2fde38b.
+//
+// Solidity: function transferOwnership(newOwner address) returns()
+func (_Token *TokenTransactor) TransferOwnership(opts *bind.TransactOpts, newOwner common.Address) (*types.Transaction, error) {
+	return _Token.contract.Transact(opts, "transferOwnership", newOwner)
+}
+
+// TransferOwnership is a paid mutator transaction binding the contract method 0xf2fde38b.
+//
+// Solidity: function transferOwnership(newOwner address) returns()
+func (_Token *TokenSession) TransferOwnership(newOwner common.Address) (*types.Transaction, error) {
+	return _Token.Contract.TransferOwnership(&_Token.TransactOpts, newOwner)
+}
+
+// TransferOwnership is a paid mutator transaction binding the contract method 0xf2fde38b.
+//
+// Solidity: function transferOwnership(newOwner address) returns()
+func (_Token *TokenTransactorSession) TransferOwnership(newOwner common.Address) (*types.Transaction, error) {
+	return _Token.Contract.TransferOwnership(&_Token.TransactOpts, newOwner)
 }

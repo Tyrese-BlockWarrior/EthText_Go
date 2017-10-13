@@ -3,6 +3,16 @@ Solidity and ÐApp experiments with [Go contract bindings](https://github.com/et
 
 # Setup
 
+### [Install solc](https://github.com/ethereum/solidity/releases) 
+Needed only if generating Go directly from `sol` rather than from `ABI`.
+
+### OSX
+```
+brew tap ethereum/ethereum
+brew install solidity
+brew linkapps solidity
+```
+
 ### [Install Geth](https://ethereum.github.io/go-ethereum/downloads/)
 The Windows installer puts it in the `path`. For other operating systems, move the binary to an existing path location such as `$GOPATH/bin`.
 
